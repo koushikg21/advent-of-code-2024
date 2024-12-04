@@ -41,7 +41,7 @@ for i in range(len(ip.split("\n"))):
     ind = 0
     polarity_dict = {"+": 0, "-": 0}
 
-print(ct)
+print("Part 1 " - ct)
 
 
 ## Part 2

@@ -22,34 +22,6 @@ directions = [
 ]
 
 
-def search_directions(row, col, searching_for, direction_tuple=(0, 0)):
-    if searching_for == "M":
-        for dir_row, dir_col in directions:
-            search_row = row + dir_row
-            search_col = col + dir_col
-
-            if search_row < rows and search_col < cols:
-                if lines[search_row][search_col] == searching_for:
-                    return True, search_row, search_col, (dir_row, dir_col)
-            else:
-                pass
-    else:
-        search_row = row + direction_tuple[0]
-        search_col = col + direction_tuple[1]
-        if search_row < rows and search_col < cols:
-            if lines[search_row][search_col] == searching_for:
-                return (
-                    True,
-                    search_row,
-                    search_col,
-                    direction_tuple,
-                )
-            else:
-                return (False, search_row, search_col, direction_tuple)
-        else:
-            pass
-
-
 def search_directions(row, col, xmas_ct):
     for dir_row, dir_col in directions:
         search_row = row + dir_row

@@ -22,7 +22,15 @@ print(cal)
 
 ## Part 2
 
-pattern = r"mul\(\s*\d+\s*,\s*\d+\s*\)"
-matches = re.findall(pattern, ip)
+import re
 
-print(matches)
+
+text = "xmul(2,4)&mul[3,7]!^don't()_mul(5,5)+mul(32,64](mul(11,8)undo()?mul(8,5))"
+# Regex to match all `mul(a,b)` with or without valid parentheses
+
+# Regex to match all potential mul(a,b) patterns
+pattern = r"(\w*mul)\((\d+),(\d+)\)"
+
+# Find all matches
+all_matches = re.findall(pattern, text)
+print(all_matches)

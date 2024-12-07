@@ -32,7 +32,7 @@ for i in range(len(ip.split("\n"))):
 
     if polarity_dict.get("+") > 0 and polarity_dict.get("-") > 0:
         flag = False
-
+    print(polarity_dict)
     if flag == False:
         flag = True
     else:
@@ -41,7 +41,7 @@ for i in range(len(ip.split("\n"))):
     ind = 0
     polarity_dict = {"+": 0, "-": 0}
 
-print("Part 1 " - ct)
+print(f"Part 1 - {ct}")
 
 
 ## Part 2
@@ -87,5 +87,4 @@ for i in range(len(ip.split("\n"))):
                 break
     else:
         final_ct += 1
-
 print(f"Part 2 - {final_ct}")
